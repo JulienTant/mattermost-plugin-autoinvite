@@ -46,7 +46,7 @@ func (p *Plugin) ensureUserInTeam(userID string) {
 	}
 
 	page := 0
-	teamIds := []string{}
+	teamIDs := []string{}
 	for {
 		teamPage, err := p.API.GetTeamMembersForUser(userID, page, 100)
 		if err != nil {
@@ -54,7 +54,7 @@ func (p *Plugin) ensureUserInTeam(userID string) {
 			break
 		}
 		for i := range teamPage {
-			teamIds = append(teamIds, teamPage[i].TeamId)
+			teamIDs = append(teamIDs, teamPage[i].TeamID)
 		}
 		if len(teamPage) < 100 {
 			break
@@ -63,9 +63,9 @@ func (p *Plugin) ensureUserInTeam(userID string) {
 	}
 
 	alreadyInTeam := false
-	for _, teamId := range teamIds {
+	for _, teamID := range teamIDs {
 		// if user already in team, skip
-		if teamId == p.team.Id {
+		if teamID == p.team.Id {
 			alreadyInTeam = true
 			break
 		}
