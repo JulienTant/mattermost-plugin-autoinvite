@@ -54,7 +54,7 @@ func (p *Plugin) ensureUserInTeam(userID string) {
 			break
 		}
 		for i := range teamPage {
-			teamIDs = append(teamIDs, teamPage[i].TeamID)
+			teamIDs = append(teamIDs, teamPage[i].TeamId)
 		}
 		if len(teamPage) < 100 {
 			break
