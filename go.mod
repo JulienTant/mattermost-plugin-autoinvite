@@ -1,4 +1,4 @@
-module github.com/mattermost/mattermost-plugin-starter-template
+module github.com/JulienTant/mattermost-plugin-autoteam
 
 go 1.19
 

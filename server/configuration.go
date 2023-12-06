@@ -3,7 +3,7 @@ package main
 import (
 	"reflect"
 
-	root "github.com/mattermost/mattermost-plugin-starter-template"
+	root "github.com/JulienTant/mattermost-plugin-autoteam"
 	"github.com/mattermost/mattermost/server/public/model"
 	"github.com/pkg/errors"
 )
